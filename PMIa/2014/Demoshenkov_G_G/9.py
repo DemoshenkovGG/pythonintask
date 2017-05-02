@@ -4,7 +4,7 @@ word=random.choice(WORDS)
 correct=word
 jumble=""
 hint=""
-ball=100
+b=100
 while word:
 	position=random.randrange(len(word))
 	jumble+=word[position]
@@ -24,11 +24,11 @@ while guess !=correct and guess!="":
 	if guess=="подсказка":
 		hint= (correct[:position+1])
 		print (hint)
-		ball-=10
+		b-=10
 		position+=1
 	elif guess==correct:
 		print("Да, именно так! Вы отгадали!\n")
-		print ("Ваши баллы",ball)
+		print ("Ваши баллы",b)
 	elif guess!=correct:
 		print("Неправильно, попробуй еще раз.")
 print("Спасибо за игру.")
